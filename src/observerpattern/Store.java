@@ -1,10 +1,10 @@
-package observerPattern;
+package observerpattern;
 
-import observerPattern.observable.IphoneObservableImpl;
-import observerPattern.observable.StockObservable;
-import observerPattern.observer.EmailAlertObserverImpl;
-import observerPattern.observer.MobileAlertObserverImpl;
-import observerPattern.observer.NotificationAlertObserver;
+import observerpattern.observable.IphoneObservableImpl;
+import observerpattern.observable.StockObservable;
+import observerpattern.observer.EmailAlertObserverImpl;
+import observerpattern.observer.MobileAlertObserverImpl;
+import observerpattern.observer.NotificationAlertObserver;
 
 public class Store
 {

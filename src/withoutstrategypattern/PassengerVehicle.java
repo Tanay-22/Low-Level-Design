@@ -1,6 +1,6 @@
-package withoutStrategyPattern;
+package withoutstrategypattern;
 
-public class Vehicle
+public class PassengerVehicle extends Vehicle
 {
     public void drive()
     {
