@@ -81,34 +81,26 @@ public class TicTacToeGame
         boolean diagonalMatch = true;
         boolean antiDiagonalMatch = true;
 
-        // check for row match
-        for(int i = 0; i < gameBoard.getSize(); i++)
+        int size = gameBoard.getSize();
+        for(int i = 0, j = 0; i < size; i++, j++)
         {
+            // check for row match
             if(gameBoard.getBoard()[row][i] == null || gameBoard.getBoard()[row][i].getPieceType() != pieceType)
             {
                 rowMatch = false;
             }
-        }
-        // check for column match
-        for(int i = 0; i < gameBoard.getSize(); i++)
-        {
+            // check for column match
             if(gameBoard.getBoard()[i][column] == null || gameBoard.getBoard()[i][column].getPieceType() != pieceType)
             {
                 columnMatch = false;
             }
-        }
-        // check for diagonal match
-        for(int i = 0, j = 0; i < gameBoard.getSize(); i++, j++)
-        {
+            // check for diagonal match
             if(gameBoard.getBoard()[i][j] == null || gameBoard.getBoard()[i][j].getPieceType() != pieceType)
             {
                 diagonalMatch = false;
             }
-        }
-        // check for anti-diagonal match
-        for(int i = 0, j = gameBoard.getSize()-1; i < gameBoard.getSize(); i++, j--)
-        {
-            if(gameBoard.getBoard()[i][j] == null || gameBoard.getBoard()[i][j].getPieceType() != pieceType)
+            // check for anti-diagonal match
+            if(gameBoard.getBoard()[i][size - j - 1] == null || gameBoard.getBoard()[i][size - j - 1].getPieceType() != pieceType)
             {
                 antiDiagonalMatch = false;
             }
