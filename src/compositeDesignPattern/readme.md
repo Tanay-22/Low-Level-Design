@@ -1,4 +1,4 @@
-**Composite Design Pattern Theory**
+# Composite Design Pattern Theory
 
 The composite design pattern is a structural design pattern that allows clients to treat individual objects and compositions of objects uniformly. This pattern is used when a group of objects should be treated as a single unit.
 
