@@ -3,6 +3,8 @@
     import carRentalSystem.product.Vehicle;
 
     import java.time.LocalDate;
+    import java.util.ArrayList;
+    import java.util.Iterator;
     import java.util.List;
 
     public class Store
@@ -11,6 +13,11 @@
         private VehicleInventoryManagement vehicleInventoryManagement;
         private Location location;
         private List<Reservation> reservations;
+
+        public Store()
+        {
+            reservations = new ArrayList<>();
+        }
 
         public int getId()
         {
@@ -65,6 +72,17 @@
         public boolean completeReservation(int reservationId)
         {
             // take out the reservation from the list and call complete the reservation method
-            return true;
+            Iterator<Reservation> iterator = reservations.iterator();
+            while (iterator.hasNext())
+            {
+                Reservation reservation = iterator.next();
+                if (reservation.getId() == reservationId)
+                {
+                    reservation.setReservationStatus(ReservationStatus.COMPLETED);
+                    iterator.remove();
+                    return true;
+                }
+            }
+            return false;
         }
     }

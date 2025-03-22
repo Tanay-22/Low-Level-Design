@@ -1,6 +1,7 @@
 package carRentalSystem;
 
-import java.time.Duration;
+import java.time.LocalDate;
+import java.time.temporal.ChronoUnit;
 
 public class Bill
 {
@@ -16,14 +17,17 @@ public class Bill
 
     public void computeBillAmount()
     {
-        Duration duration = Duration.between(reservation.getBookedTill(), reservation.getBookedFrom());
+        LocalDate from = reservation.getBookedFrom();
+        LocalDate till = reservation.getBookedTill();
         if(ReservationType.DAILY.equals(reservation.getReservationType()))
         {
-            totalBillAmount = duration.toDays() * reservation.getVehicle().getDailyRentalCost();
+            long days = ChronoUnit.DAYS.between(from, till);
+            totalBillAmount = days * reservation.getVehicle().getDailyRentalCost();
         }
         else
         {
-            totalBillAmount = duration.toHours() * reservation.getVehicle().getHourlyRentalCost();
+            long hours = ChronoUnit.HOURS.between(from.atStartOfDay(), till.atStartOfDay());
+            totalBillAmount = hours * reservation.getVehicle().getHourlyRentalCost();
         }
     }
 

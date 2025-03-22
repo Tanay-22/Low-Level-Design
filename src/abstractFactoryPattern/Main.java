@@ -1,5 +1,9 @@
 package abstractFactoryPattern;
 
+import abstractFactoryPattern.factory.CarFactory;
+import abstractFactoryPattern.factory.TruckFactory;
+import abstractFactoryPattern.factory.VehicleFactory;
+
 public class Main
 {
     public static void main(String[] args)

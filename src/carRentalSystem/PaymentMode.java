@@ -3,5 +3,8 @@ package carRentalSystem;
 public enum PaymentMode
 {
     CASH,
-    ONLINE
+    UPI,
+    DEBIT_CARD,
+    CREDIT_CARD,
+    NET_BANKING
 }

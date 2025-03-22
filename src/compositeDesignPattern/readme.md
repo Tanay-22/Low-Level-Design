@@ -10,7 +10,7 @@ The composite design pattern is a structural design pattern that allows clients 
 
 **Problem Statement**
 
-In the context of the video, the problem statement is designing a file system. The file system can have files or directories, and directories can have files or subdirectories. This creates a tree-like structure, where a directory can contain multiple files or subdirectories.
+The problem statement is designing a file system. The file system can have files or directories, and directories can have files or subdirectories. This creates a tree-like structure, where a directory can contain multiple files or subdirectories.
 
 **Solution**
 
