@@ -1,4 +1,4 @@
-package builderDesignPattern;
+package creationalDesignPattern.builderDesignPattern;
 
 public class Client
 {
