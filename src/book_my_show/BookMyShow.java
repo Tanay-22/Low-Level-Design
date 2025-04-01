@@ -153,7 +153,5 @@ public class BookMyShow
             //throw exception
             System.out.println("seat already booked, try again");
         }
-
-
     }
 }
