@@ -2,8 +2,8 @@ package parkingLot.model;
 
 public class Vehicle
 {
-    private String number;
-    private VehicleType vehicleType;
+    private final String number;
+    private final VehicleType vehicleType;
 
     public Vehicle(String number, VehicleType vehicleType)
     {
