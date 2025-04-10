@@ -7,9 +7,9 @@ import java.util.Date;
 
 public class Match
 {
-    private final Team homeTeam;
-    private final Team awayTeam;
+    private Team homeTeam;
+    private Team awayTeam;
     private Date date;
     private String venue;
-    private final InningDetails[] inningDetails;
+    private InningDetails[] inningDetails;
 }

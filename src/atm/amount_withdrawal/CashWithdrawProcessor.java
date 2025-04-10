@@ -6,7 +6,7 @@ public abstract class CashWithdrawProcessor
 {
     CashWithdrawProcessor nextCashWithdrawProcessor;
 
-    public CashWithdrawProcessor(CashWithdrawProcessor nextCashWithdrawProcessor)
+    protected CashWithdrawProcessor(CashWithdrawProcessor nextCashWithdrawProcessor)
     {
         this.nextCashWithdrawProcessor = nextCashWithdrawProcessor;
     }
